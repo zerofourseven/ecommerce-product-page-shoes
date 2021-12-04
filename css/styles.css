@@ -1,0 +1,12 @@
+:root {
+  --color-primary: hsl(26, 100%, 55%);
+  --color-primary-pale: hsl(25, 100%, 94%);
+}
+
+/* Typography */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media screen and (min-width: 1440px) {
+}
