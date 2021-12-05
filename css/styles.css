@@ -226,6 +226,79 @@ body {
   }
 }
 
+/* Buttons */
+.btn {
+  border: 0;
+  cursor: pointer;
+  text-align: center;
+  transition: filter 0.2s;
+  outline: 0;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.btn--block {
+  border-radius: 12px;
+
+  background-color: var(--color-primary);
+  padding: 2rem 4vw;
+  color: white;
+  min-width: 100%;
+}
+
+.btn--circle {
+  background-color: white;
+  padding: 1.8rem;
+  border-radius: 50%;
+}
+
+.btn--shadow {
+  box-shadow: 0 40px 70px -10px var(--color-primary);
+}
+
+.btn .icon {
+  width: 2rem;
+  height: 2rem;
+  vertical-align: middle;
+}
+
+.btn--block .icon {
+  margin-right: 1rem;
+  filter: brightness(4);
+}
+
+.btn--circle .icon {
+  width: 1.7rem;
+  filter: brightness(0.1);
+}
+
+.btn--block:hover {
+  filter: brightness(1.1);
+}
+
+.btn--circle:hover {
+  filter: brightness(0.9);
+}
+
+/* Product info block */
+.product {
+  margin: 2rem;
+}
+
+.product__company {
+  text-transform: uppercase;
+  color: var(--color-primary);
+  font-size: 1rem;
+}
+
+.product__name {
+  color: var(--color-heading);
+}
+
+.product__description {
+  color: var(--color-body);
+}
+
 /* Attribution bar at bottom */
 .attribution {
   font-size: 11px;
