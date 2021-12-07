@@ -2,6 +2,8 @@
     Contains product information. company name, product name,
     description, pricing information, and buttons to add to cart
     and to change amount to add. 
+
+    put this and img gallery in div.grid.grid--1x2
 -->
 <section class="product container">
   <header>
@@ -13,4 +15,22 @@
     a durable rubber outer sole, they’ll withstand everything the weather can
     offer.
   </p>
+  <div class="price-section">
+    <span class="price-section-segment">
+      <span class="price-sale">$125.00</span>
+      <span class="price-deal">50%</span>
+    </span>
+    <span class="price-original">$250.00</span>
+  </div>
+  <div class="product__button-grid">
+    <div class="product__count-button">
+      <button class="btn" onclick="subAmount()"><img class="icon--count icon-sub" src="images/icon-minus.svg" alt=""></img></button>
+      <div id="item-amount">0</div>
+      <button class="btn" onclick="addAmount()"><img class="icon--count" src="images/icon-plus.svg" alt=""></img></button>
+    </div>
+    <button class="btn btn--block btn--shadow">
+      <img class="icon" src="images/icon-cart.svg" alt=""></img>
+      Add to cart
+    </button>
+  </div>
 </section>
