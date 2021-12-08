@@ -69,18 +69,25 @@ body {
   height: 40px;
 }
 
-/* Shadow over page for lightbox, and for sidenav */
+/* styling for shadow over page. for lightbox and for sidenav */
 .shadow {
-  visibility: hidden;
-  opacity: 0;
   background-color: var(--color-lightbox-bg);
   width: 100%;
   height: 100%;
   position: fixed;
-  /* TODO make fade in and out */
   -webkit-transition: visibility 0.5s, opacity 0.5s;
   transition: visibility 0.5s, opacity 0.5s;
   z-index: 1;
+}
+
+.shadow--sidenav {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.shadow--slideshow {
+  visibility: hidden;
+  opacity: 0;
 }
 
 /* Sidenav bar, exists on mobile only */
@@ -123,7 +130,7 @@ body {
 
 @media screen and (min-width: 1440px) {
   .sidenav,
-  .shadow {
+  .shadow--sidenav {
     display: none;
   }
 }
@@ -430,22 +437,179 @@ body {
   position: relative;
 }
 
-.slideshow__image > img {
+.slideshow__image--lightbox {
+  display: block;
+}
+
+.slideshow__image > img,
+.slideshow__image--lightbox > img {
   width: 100%;
 }
 
 .slideshow__buttons {
   position: relative;
-  bottom: 50%;
+  bottom: 55%;
   width: 100%;
 }
 
 .slideshow__previous {
-  left: 1rem;
+  position: absolute;
+  left: 1.5rem;
 }
 
 .slideshow__next {
-  right: 1rem;
+  position: absolute;
+  right: 1.5rem;
+}
+
+.slideshow__thumbnails-row {
+  display: none;
+}
+
+.shadow--slideshow {
+  display: none;
+}
+
+@media screen and (min-width: 1440px) {
+  /*
+  - arrow buttons go away
+  - thumbnail gallery appears below main image 
+
+*/
+  .slideshow__buttons--main {
+    display: none;
+  }
+
+  .slideshow__image img,
+  .slideshow__thumbnail,
+  .slideshow__thumbnail--lightbox {
+    cursor: pointer;
+  }
+
+  .slideshow__image img,
+  .slideshow__image--lightbox img,
+  .slideshow__thumbnail,
+  .slideshow__thumbnail--lightbox,
+  .slideshow__thumbnail--lightbox-container {
+    border-radius: 2rem;
+  }
+
+  .slideshow__thumbnail,
+  .slideshow__thumbnail--lightbox {
+    border: 3px solid rgba(0, 0, 0, 0);
+    transition: opacity 0.3s;
+  }
+
+  .slideshow__thumbnails-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+
+  .slideshow__thumbnail:hover,
+  .slideshow__thumbnail--lightbox:hover {
+    opacity: 0.4;
+  }
+
+  .active {
+    opacity: 0.4;
+    border: 2px solid var(--color-primary);
+  }
+}
+
+/* Lightbox. Available in desktop mode*/
+.lightbox {
+  display: none;
+}
+
+.lightbox__close {
+  cursor: pointer;
+  float: right;
+  height: 20px;
+  margin-bottom: 2rem;
+  margin-right: 1rem;
+  margin-top: 2.5rem;
+  filter: brightness(5);
+  transition: filter 0.1s;
+  width: 20px;
+}
+
+.lightbox__close:hover {
+  filter: invert(76%) sepia(52%) saturate(6403%) hue-rotate(347deg)
+    brightness(101%) contrast(101%);
+}
+
+@media screen and (min-width: 1440px) {
+  /*
+  - clicking on main image brings up lightbox version of slideshow 
+  - arrow buttons return
+  - thumbnail gallery returns
+*/
+
+  .lightbox {
+    position: absolute;
+    display: block;
+    width: 100%;
+
+    height: 100vh;
+    z-index: 1;
+  }
+
+  .shadow--slideshow {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: block;
+
+    z-index: 2;
+  }
+
+  .slideshow--lightbox {
+    max-width: 33%;
+    margin: 0 auto;
+  }
+
+  .slideshow__buttons--lightbox {
+    position: fixed;
+    margin-bottom: 4rem;
+    width: 33%;
+  }
+
+  .slideshow__buttons--lightbox .slideshow__previous:hover img,
+  .slideshow__buttons--lightbox .slideshow__next:hover img {
+    filter: invert(76%) sepia(52%) saturate(6403%) hue-rotate(347deg)
+      brightness(101%) contrast(101%);
+  }
+
+  .slideshow__previous img,
+  .slideshow__next img {
+    transition: filter 0.3s;
+  }
+
+  .slideshow__buttons--lightbox .slideshow__previous {
+    margin-left: -4rem;
+  }
+
+  .slideshow__buttons--lightbox .slideshow__next {
+    margin-right: -4rem;
+  }
+
+  .slideshow--lightbox .slideshow__thumbnails-row {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+
+  .slideshow__thumbnail--lightbox-container {
+    background-color: white;
+  }
+
+  .slideshow__thumbnail--lightbox {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 /* Attribution bar at bottom */
