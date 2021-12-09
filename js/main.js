@@ -28,7 +28,28 @@ function subAmount() {
 
 /* TODO code for shopping cart amount badge */
 
-/* TODO code for shopping cart display */
+/* code for shopping cart display */
+function toggleCartCard() {
+  if (document.getElementById("cart-card").style.display == "block"){
+    document.getElementById("cart-card").style.display = "none";
+  }
+  else {
+    document.getElementById("cart-card").style.display = "block";
+  }
+}
+
+var cartItems = 0;
+//for filling cart if items are present
+function checkCart() {
+  if(cartItems > 0) {
+    //display certain elements
+  }
+  else {
+    //hide certain elements, and fill 'cart-card__items' with 'Your cart is empty.'
+  }
+}
+
+
 
 /* for mobile image gallery */
 let slideIndex = 1;
