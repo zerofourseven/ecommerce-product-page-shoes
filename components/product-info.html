@@ -5,6 +5,8 @@
 
     put this and img gallery in div.grid.grid--1x2
 -->
+<!--Note this goes into a <div class="grid grid--1x2 container main-grid-container"> with the product-info section-->
+<!--Product info section-->
 <section class="product container">
   <header>
     <h2 class="product__company">Sneaker Company</h2>
@@ -24,12 +26,24 @@
   </div>
   <div class="product__button-grid">
     <div class="product__count-button">
-      <button class="btn" onclick="subAmount()"><img class="icon--count icon-sub" src="images/icon-minus.svg" alt=""></img></button>
+      <button class="btn" onclick="subAmount()">
+        <img
+          class="icon--count icon-sub"
+          src="images/icon-minus.svg"
+          alt="Add less to cart"
+        />
+      </button>
       <div id="item-amount">0</div>
-      <button class="btn" onclick="addAmount()"><img class="icon--count" src="images/icon-plus.svg" alt=""></img></button>
+      <button class="btn" onclick="addAmount()">
+        <img
+          class="icon--count"
+          src="images/icon-plus.svg"
+          alt="Add more to cart"
+        />
+      </button>
     </div>
-    <button class="btn btn--block btn--shadow">
-      <img class="icon" src="images/icon-cart.svg" alt=""></img>
+    <button class="btn btn--block btn--shadow" onclick="addToCart()">
+      <img class="icon" src="images/icon-cart.svg" alt="Add items to cart" />
       Add to cart
     </button>
   </div>

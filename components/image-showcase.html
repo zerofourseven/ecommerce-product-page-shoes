@@ -1,138 +1,136 @@
 <!--Lightbox section-->
 <div id="lightbox" class="lightbox">
-    <div
-      id="shadow--slideshow"
-      class="shadow shadow--slideshow"
-     
-    >
-    
-
-      <section class="slideshow slideshow--lightbox">
-        <img  class="lightbox__close" src="images/icon-close.svg" onclick="closeLightbox()"></img>
-        <div class="slideshow__image--lightbox">
-          <img src="images/image-product-1.jpg" alt="" />
-        </div>
-        <div class="slideshow__image--lightbox">
-          <img src="images/image-product-2.jpg" alt="" />
-        </div>
-        <div class="slideshow__image--lightbox">
-          <img src="images/image-product-3.jpg" alt="" />
-        </div>
-        <div class="slideshow__image--lightbox">
-          <img src="images/image-product-4.jpg" alt="" />
-        </div>
-
-        <div class="slideshow__buttons slideshow__buttons--lightbox">
-          <button
-            class="btn btn--circle slideshow__previous"
-            onClick="changeSlides(-1)"
-          >
-            <img src="images/icon-previous.svg" alt="" class="icon" />
-          </button>
-          <button
-            class="btn btn--circle slideshow__next"
-            onClick="changeSlides(1)"
-          >
-            <img src="images/icon-next.svg" alt="" class="icon" />
-          </button>
-        </div>
-
-        
-        <div class="slideshow__thumbnails-row">
-          <div class="slideshow__thumbnail--lightbox-container">
-            <img
-              src="images/image-product-1-thumbnail.jpg"
-              alt=""
-              class="slideshow__thumbnail--lightbox"
-              onclick="currentSlide(1)"
-            />
-          </div>
-          <div class="slideshow__thumbnail--lightbox-container">
-            <img
-              src="images/image-product-2-thumbnail.jpg"
-              alt=""
-              class="slideshow__thumbnail--lightbox"
-              onclick="currentSlide(2)"
-            />
-          </div>
-          <div class="slideshow__thumbnail--lightbox-container">
-            <img
-              src="images/image-product-3-thumbnail.jpg"
-              alt=""
-              class="slideshow__thumbnail--lightbox"
-              onclick="currentSlide(3)"
-            />
-          </div>
-          <div class="slideshow__thumbnail--lightbox-container">
-            <img
-              src="images/image-product-4-thumbnail.jpg"
-              alt=""
-              class="slideshow__thumbnail--lightbox"
-              onclick="currentSlide(4)"
-            />
-          </div>
-        </div>
-      </section>
-    </div>
-  </div>
-
-  <!--Slideshow section-->
-  <div class="grid grid--1x2"><!--NOTE this grid will contain this and the product info on final page.-->
-    <section class="slideshow container">
-      <div id="slideshow__image-container" onclick="openLightbox()">
-        <div class="slideshow__image">
-          <img src="images/image-product-1.jpg" alt="" />
-        </div>
-        <div class="slideshow__image">
-          <img src="images/image-product-2.jpg" alt="" />
-        </div>
-        <div class="slideshow__image">
-          <img src="images/image-product-3.jpg" alt="" />
-        </div>
-        <div class="slideshow__image">
-          <img src="images/image-product-4.jpg" alt="" />
-        </div>
+  <div id="shadow--slideshow" class="shadow shadow--slideshow">
+    <section class="slideshow slideshow--lightbox">
+      <img
+        class="lightbox__close"
+        src="images/icon-close.svg"
+        alt="Close lightbox"
+        onclick="closeLightbox()"
+      />
+      <div class="slideshow__image--lightbox">
+        <img src="images/image-product-1.jpg" alt="Image of shoes" />
       </div>
-      <div class="slideshow__buttons slideshow__buttons--main">
+      <div class="slideshow__image--lightbox">
+        <img src="images/image-product-2.jpg" alt="Image of shoes" />
+      </div>
+      <div class="slideshow__image--lightbox">
+        <img src="images/image-product-3.jpg" alt="Image of shoes" />
+      </div>
+      <div class="slideshow__image--lightbox">
+        <img src="images/image-product-4.jpg" alt="Image of shoes" />
+      </div>
+
+      <div class="slideshow__buttons slideshow__buttons--lightbox">
         <button
           class="btn btn--circle slideshow__previous"
           onClick="changeSlides(-1)"
         >
-          <img src="images/icon-previous.svg" alt="" class="icon" />
+          <img
+            src="images/icon-previous.svg"
+            alt="Previous image"
+            class="icon"
+          />
         </button>
         <button
           class="btn btn--circle slideshow__next"
           onClick="changeSlides(1)"
         >
-          <img src="images/icon-next.svg" alt="" class="icon" />
+          <img src="images/icon-next.svg" alt="Next image" class="icon" />
         </button>
       </div>
 
       <div class="slideshow__thumbnails-row">
-        <img
-          src="images/image-product-1-thumbnail.jpg"
-          alt=""
-          class="slideshow__thumbnail"
-          onclick="currentSlide(1)"
-        />
-        <img
-          src="images/image-product-2-thumbnail.jpg"
-          alt=""
-          class="slideshow__thumbnail"
-          onclick="currentSlide(2)"
-        />
-        <img
-          src="images/image-product-3-thumbnail.jpg"
-          alt=""
-          class="slideshow__thumbnail"
-          onclick="currentSlide(3)"
-        />
-        <img
-          src="images/image-product-4-thumbnail.jpg"
-          alt=""
-          class="slideshow__thumbnail"
-          onclick="currentSlide(4)"
-        />
+        <div class="slideshow__thumbnail--lightbox-container">
+          <img
+            src="images/image-product-1-thumbnail.jpg"
+            alt="Image of shoes"
+            class="slideshow__thumbnail--lightbox"
+            onclick="currentSlide(1)"
+          />
+        </div>
+        <div class="slideshow__thumbnail--lightbox-container">
+          <img
+            src="images/image-product-2-thumbnail.jpg"
+            alt="Image of shoes"
+            class="slideshow__thumbnail--lightbox"
+            onclick="currentSlide(2)"
+          />
+        </div>
+        <div class="slideshow__thumbnail--lightbox-container">
+          <img
+            src="images/image-product-3-thumbnail.jpg"
+            alt="Image of shoes"
+            class="slideshow__thumbnail--lightbox"
+            onclick="currentSlide(3)"
+          />
+        </div>
+        <div class="slideshow__thumbnail--lightbox-container">
+          <img
+            src="images/image-product-4-thumbnail.jpg"
+            alt="Image of shoes"
+            class="slideshow__thumbnail--lightbox"
+            onclick="currentSlide(4)"
+          />
+        </div>
       </div>
     </section>
   </div>
+</div>
+
+<!--Note this goes into a <div class="grid grid--1x2 container main-grid-container"> with the product-info section-->
+<!--Image / Slideshow section-->
+<section class="slideshow container">
+  <div id="slideshow__image-container" onclick="openLightbox()">
+    <div class="slideshow__image">
+      <img src="images/image-product-1.jpg" alt="Image of shoes" />
+    </div>
+    <div class="slideshow__image">
+      <img src="images/image-product-2.jpg" alt="Image of shoes" />
+    </div>
+    <div class="slideshow__image">
+      <img src="images/image-product-3.jpg" alt="Image of shoes" />
+    </div>
+    <div class="slideshow__image">
+      <img src="images/image-product-4.jpg" alt="Image of shoes" />
+    </div>
+  </div>
+  <div class="slideshow__buttons slideshow__buttons--main">
+    <button
+      class="btn btn--circle slideshow__previous"
+      onClick="changeSlides(-1)"
+    >
+      <img src="images/icon-previous.svg" alt="Previous image" class="icon" />
+    </button>
+    <button class="btn btn--circle slideshow__next" onClick="changeSlides(1)">
+      <img src="images/icon-next.svg" alt="Next image" class="icon" />
+    </button>
+  </div>
+
+  <div class="slideshow__thumbnails-row">
+    <img
+      src="images/image-product-1-thumbnail.jpg"
+      alt="Image of shoes"
+      class="slideshow__thumbnail"
+      onclick="currentSlide(1)"
+    />
+    <img
+      src="images/image-product-2-thumbnail.jpg"
+      alt="Image of shoes"
+      class="slideshow__thumbnail"
+      onclick="currentSlide(2)"
+    />
+    <img
+      src="images/image-product-3-thumbnail.jpg"
+      alt="Image of shoes"
+      class="slideshow__thumbnail"
+      onclick="currentSlide(3)"
+    />
+    <img
+      src="images/image-product-4-thumbnail.jpg"
+      alt="Image of shoes"
+      class="slideshow__thumbnail"
+      onclick="currentSlide(4)"
+    />
+  </div>
+</section>

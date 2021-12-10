@@ -1,7 +1,7 @@
 
 /* Switches sidenav from expanded to non-expanded state. */
 function openSideNav() {
-  document.getElementById("sidenav").style.width = "30rem";
+  document.getElementById("sidenav").style.width = "25rem";
   document.getElementById("shadow--sidenav").style.visibility = "visible";
  document.getElementById("shadow--sidenav").style.opacity = "1";
   
@@ -25,8 +25,20 @@ function subAmount() {
     document.getElementById("item-amount").innerHTML--; 
 }
 
+var cartItems = 0;
 
-/* TODO code for shopping cart amount badge */
+/* code for amount in cart */
+function addToCart() {
+  cartItems += parseInt(document.getElementById("item-amount").innerHTML);
+  checkCart();
+  //console.log(cartItems);
+}
+
+function emptyCart() {
+  cartItems = 0;
+  checkCart();
+  //console.log(cartItems);
+}
 
 /* code for shopping cart display */
 function toggleCartCard() {
@@ -38,20 +50,34 @@ function toggleCartCard() {
   }
 }
 
-var cartItems = 0;
-//for filling cart if items are present
+
+//for updating the cart 
 function checkCart() {
   if(cartItems > 0) {
-    //display certain elements
+    document.getElementById("cart-card__items--empty").style.display = "none";
+    document.getElementById("cart-card__items").style.display = "grid";
+    document.getElementById("cart-card__item-pricing").innerHTML = 
+      "$125.00 x " + cartItems + " <b>$" + 125 * cartItems + ".00</b>";
+      document.getElementById("nav__cart-badge").innerHTML = cartItems;
+      document.getElementById("nav__cart-badge").style.display = "block"
   }
   else {
-    //hide certain elements, and fill 'cart-card__items' with 'Your cart is empty.'
+    // 'Your cart is empty.'
+    document.getElementById("cart-card__items--empty").style.display = "block";
+    document.getElementById("cart-card__items").style.display = "none";
+    document.getElementById("nav__cart-badge").innerHTML = cartItems;
+    document.getElementById("nav__cart-badge").style.display = "none"
   }
 }
 
+//run update on initial page load
+checkCart();
+//close on initial page load
+document.getElementById("cart-card").style.display = "none";
 
 
-/* for mobile image gallery */
+
+/* for image galleries */
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -88,7 +114,7 @@ function showSlides(n){
   thumbnailsLightbox[slideIndex - 1].className += " active";
 }
 
-/* code for lightbox image gallery */
+/* unneeded code for lightbox image gallery */
 /*const mediaQuery = window.matchMedia('(min-width: 1440px)');
 
 function handleSizeChange(e) {
@@ -120,7 +146,7 @@ lightboxQuery.onchange = (e) => {
 
 function openLightbox(){
   //only want lightbox if in desktop mode.
-  if (window.innerWidth >= 1440){
+  if (window.innerWidth >= 1200){
     document.getElementById("lightbox").style.display = "block";
     document.getElementById("shadow--slideshow").style.visibility = "visible";
     document.getElementById("shadow--slideshow").style.opacity = "1";

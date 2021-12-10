@@ -2,14 +2,23 @@
     Side nav bar, for mobile display. Shadow div adds a backdrop when the
     sidebar is visible. 
 -->
-<div id="shadow--sidenav" class="shadow shadow--sidenav" onclick="closeSideNav()"></div>
-    <nav id="sidenav" class="sidenav">
-      <img  class="sidenav__close" src="images/icon-close.svg" onclick="closeSideNav()"></img>
-      <ul class="list sidenav__list">
-        <li class="nav__item"><a href="#">Collections</a></li>
-        <li class="nav__item"><a href="#">Men</a></li>
-        <li class="nav__item"><a href="#">Women</a></li>
-        <li class="nav__item"><a href="#">About</a></li>
-        <li class="nav__item"><a href="#">Contact</a></li>
-      </ul>
-    </nav>
+<div
+  id="shadow--sidenav"
+  class="shadow shadow--sidenav"
+  onclick="closeSideNav()"
+></div>
+<nav id="sidenav" class="sidenav">
+  <img
+    class="sidenav__close"
+    src="images/icon-close.svg"
+    alt="Close navigation sidebar"
+    onclick="closeSideNav()"
+  />
+  <ul class="list sidenav__list">
+    <li class="nav__item"><a href="#">Collections</a></li>
+    <li class="nav__item"><a href="#">Men</a></li>
+    <li class="nav__item"><a href="#">Women</a></li>
+    <li class="nav__item"><a href="#">About</a></li>
+    <li class="nav__item"><a href="#">Contact</a></li>
+  </ul>
+</nav>

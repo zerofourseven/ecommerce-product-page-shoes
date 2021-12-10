@@ -23,9 +23,18 @@
     <title>Frontend Mentor | E-commerce product page</title>
   </head>
   <body>
-    <div id="shadow--sidenav" class="shadow shadow--sidenav" onclick="closeSideNav()"></div>
+    <div
+      id="shadow--sidenav"
+      class="shadow shadow--sidenav"
+      onclick="closeSideNav()"
+    ></div>
     <nav id="sidenav" class="sidenav">
-      <img  class="sidenav__close" src="images/icon-close.svg" onclick="closeSideNav()"></img>
+      <img
+        class="sidenav__close"
+        src="images/icon-close.svg"
+        alt="Close navigation sidebar"
+        onclick="closeSideNav()"
+      />
       <ul class="list sidenav__list">
         <li class="nav__item"><a href="#">Collections</a></li>
         <li class="nav__item"><a href="#">Men</a></li>
@@ -35,8 +44,15 @@
       </ul>
     </nav>
     <nav class="nav container">
-      <img class="nav__toggler" src="images/icon-menu.svg" onclick="openSideNav()"></img>
-      <a href="/" class="nav__brand"><img src="images/logo.svg" alt="" /></a>
+      <img
+        class="nav__toggler"
+        src="images/icon-menu.svg"
+        alt="Toggle navigation sidebar"
+        onclick="openSideNav()"
+      />
+      <a href="/" class="nav__brand"
+        ><img src="images/logo.svg" alt="Sneakers brand logo"
+      /></a>
       <ul class="list nav__list">
         <li class="nav__item"><a href="#">Collections</a></li>
         <li class="nav__item"><a href="#">Men</a></li>
@@ -44,31 +60,236 @@
         <li class="nav__item"><a href="#">About</a></li>
         <li class="nav__item"><a href="#">Contact</a></li>
       </ul>
-      <img class="nav__cart" src="images/icon-cart.svg" alt="Shopping Cart" onclick="toggleCartCard()"></img>
-      <img class="nav__avatar" src="images/image-avatar.png" alt="" />
+      <span class="nav__cart-container" onclick="toggleCartCard()">
+        <img class="nav__cart" src="images/icon-cart.svg" alt="Shopping Cart" />
+        <span id="nav__cart-badge" class="nav__cart-badge"></span>
+      </span>
+      <img class="nav__avatar" src="images/image-avatar.png" alt="Avatar" />
     </nav>
     <!--Cart card-->
     <div class="cart-card-container">
       <div id="cart-card" class="cart-card">
         <p class="cart-card__title">Cart</p>
+        <div id="cart-card__items--empty" class="cart-card__items--empty">
+          Your cart is empty.
+        </div>
         <!--This would be a list of items in a real app-->
-        <div class="cart-card__items">
+        <div id="cart-card__items" class="cart-card__items">
           <div class="cart-card__item">
             <img
-                  src="images/image-product-1-thumbnail.jpg"
-                  alt=""
-                  class="cart-card__item-img"
+              src="images/image-product-1-thumbnail.jpg"
+              alt="Product image"
+              class="cart-card__item-img"
             />
             <div>
               <p class="cart-card__item-title">Fall Limited Edition Sneakers</p>
-              <p class="cart-card__item-pricing">$125.00 x 3 <b>$375.00</b></p>
+              <p
+                id="cart-card__item-pricing"
+                class="cart-card__item-pricing"
+              ></p>
             </div>
-      
-            <img class="cart-card__delete " src="images/icon-delete.svg"></img>
+
+            <img
+              class="cart-card__delete"
+              src="images/icon-delete.svg"
+              alt="Remove items from cart"
+              onclick="emptyCart()"
+            />
           </div>
           <button class="btn btn--block cart-card__checkout">Checkout</button>
         </div>
       </div>
+    </div>
+    <!--Lightbox section-->
+    <div id="lightbox" class="lightbox">
+      <div id="shadow--slideshow" class="shadow shadow--slideshow">
+        <section class="slideshow slideshow--lightbox">
+          <img
+            class="lightbox__close"
+            src="images/icon-close.svg"
+            alt="Close lightbox"
+            onclick="closeLightbox()"
+          />
+          <div class="slideshow__image--lightbox">
+            <img src="images/image-product-1.jpg" alt="Image of shoes" />
+          </div>
+          <div class="slideshow__image--lightbox">
+            <img src="images/image-product-2.jpg" alt="Image of shoes" />
+          </div>
+          <div class="slideshow__image--lightbox">
+            <img src="images/image-product-3.jpg" alt="Image of shoes" />
+          </div>
+          <div class="slideshow__image--lightbox">
+            <img src="images/image-product-4.jpg" alt="Image of shoes" />
+          </div>
+
+          <div class="slideshow__buttons slideshow__buttons--lightbox">
+            <button
+              class="btn btn--circle slideshow__previous"
+              onClick="changeSlides(-1)"
+            >
+              <img
+                src="images/icon-previous.svg"
+                alt="Previous image"
+                class="icon"
+              />
+            </button>
+            <button
+              class="btn btn--circle slideshow__next"
+              onClick="changeSlides(1)"
+            >
+              <img src="images/icon-next.svg" alt="Next image" class="icon" />
+            </button>
+          </div>
+
+          <div class="slideshow__thumbnails-row">
+            <div class="slideshow__thumbnail--lightbox-container">
+              <img
+                src="images/image-product-1-thumbnail.jpg"
+                alt="Image of shoes"
+                class="slideshow__thumbnail--lightbox"
+                onclick="currentSlide(1)"
+              />
+            </div>
+            <div class="slideshow__thumbnail--lightbox-container">
+              <img
+                src="images/image-product-2-thumbnail.jpg"
+                alt="Image of shoes"
+                class="slideshow__thumbnail--lightbox"
+                onclick="currentSlide(2)"
+              />
+            </div>
+            <div class="slideshow__thumbnail--lightbox-container">
+              <img
+                src="images/image-product-3-thumbnail.jpg"
+                alt="Image of shoes"
+                class="slideshow__thumbnail--lightbox"
+                onclick="currentSlide(3)"
+              />
+            </div>
+            <div class="slideshow__thumbnail--lightbox-container">
+              <img
+                src="images/image-product-4-thumbnail.jpg"
+                alt="Image of shoes"
+                class="slideshow__thumbnail--lightbox"
+                onclick="currentSlide(4)"
+              />
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!--NOTE this grid contains image showcase block AND product info block -->
+    <div class="grid grid--1x2 container main-grid-container">
+      <!--Image / Slideshow section-->
+      <section class="slideshow container">
+        <div id="slideshow__image-container" onclick="openLightbox()">
+          <div class="slideshow__image">
+            <img src="images/image-product-1.jpg" alt="Image of shoes" />
+          </div>
+          <div class="slideshow__image">
+            <img src="images/image-product-2.jpg" alt="Image of shoes" />
+          </div>
+          <div class="slideshow__image">
+            <img src="images/image-product-3.jpg" alt="Image of shoes" />
+          </div>
+          <div class="slideshow__image">
+            <img src="images/image-product-4.jpg" alt="Image of shoes" />
+          </div>
+        </div>
+        <div class="slideshow__buttons slideshow__buttons--main">
+          <button
+            class="btn btn--circle slideshow__previous"
+            onClick="changeSlides(-1)"
+          >
+            <img
+              src="images/icon-previous.svg"
+              alt="Previous image"
+              class="icon"
+            />
+          </button>
+          <button
+            class="btn btn--circle slideshow__next"
+            onClick="changeSlides(1)"
+          >
+            <img src="images/icon-next.svg" alt="Next image" class="icon" />
+          </button>
+        </div>
+
+        <div class="slideshow__thumbnails-row">
+          <img
+            src="images/image-product-1-thumbnail.jpg"
+            alt="Image of shoes"
+            class="slideshow__thumbnail"
+            onclick="currentSlide(1)"
+          />
+          <img
+            src="images/image-product-2-thumbnail.jpg"
+            alt="Image of shoes"
+            class="slideshow__thumbnail"
+            onclick="currentSlide(2)"
+          />
+          <img
+            src="images/image-product-3-thumbnail.jpg"
+            alt="Image of shoes"
+            class="slideshow__thumbnail"
+            onclick="currentSlide(3)"
+          />
+          <img
+            src="images/image-product-4-thumbnail.jpg"
+            alt="Image of shoes"
+            class="slideshow__thumbnail"
+            onclick="currentSlide(4)"
+          />
+        </div>
+      </section>
+      <!--Product info section-->
+      <section class="product container">
+        <header>
+          <h2 class="product__company">Sneaker Company</h2>
+          <h1 class="product__name">Fall Limited Edition Sneakers</h1>
+        </header>
+        <p class="product__description">
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they’ll withstand everything
+          the weather can offer.
+        </p>
+        <div class="price-section">
+          <span class="price-section-segment">
+            <span class="price-sale">$125.00</span>
+            <span class="price-deal">50%</span>
+          </span>
+          <span class="price-original">$250.00</span>
+        </div>
+        <div class="product__button-grid">
+          <div class="product__count-button">
+            <button class="btn" onclick="subAmount()">
+              <img
+                class="icon--count icon-sub"
+                src="images/icon-minus.svg"
+                alt="Add less to cart"
+              />
+            </button>
+            <div id="item-amount">0</div>
+            <button class="btn" onclick="addAmount()">
+              <img
+                class="icon--count"
+                src="images/icon-plus.svg"
+                alt="Add more to cart"
+              />
+            </button>
+          </div>
+          <button class="btn btn--block btn--shadow" onclick="addToCart()">
+            <img
+              class="icon"
+              src="images/icon-cart.svg"
+              alt="Add items to cart"
+            />
+            Add to cart
+          </button>
+        </div>
+      </section>
     </div>
 
     <!-- <div class="attribution">
@@ -77,6 +298,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Chris Williams</a>.
     </div> -->
+    <script src="js/main.js"></script>
   </body>
-  <script src="js/main.js"></script>
 </html>
