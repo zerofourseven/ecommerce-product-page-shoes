@@ -258,18 +258,17 @@ body {
 .btn {
   border: 0;
   cursor: pointer;
-  text-align: center;
-
-  outline: 0;
   font-weight: 700;
+  outline: 0;
+  text-align: center;
   white-space: nowrap;
 }
 
 .btn--block {
-  border-radius: 12px;
   background-color: var(--color-primary);
-  padding: 2rem 4vw;
+  border-radius: 12px;
   color: white;
+  padding: 2rem 4vw;
   text-align: center;
   transition: opacity 0.3s;
 }

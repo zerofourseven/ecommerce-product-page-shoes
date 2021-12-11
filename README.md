@@ -21,7 +21,7 @@ This is my solution to the [E-commerce product page challenge on Frontend Mentor
 
 ### The challenge
 
-Users should be able to:
+The challenge was to create a responsive site using the design images provided by Frontend Mentor while also allowing users to:
 
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
@@ -53,11 +53,9 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Working on this allowed me to gain experience and try a number of things new to me. Concepts I had previously learned like working with Flexbox and Grids, using the BEM naming convention, etc. were reinforced. As for learnings, for one, I learned how to implemented lightboxes. I also grasped how to implement image slideshows, both by using arrows and also by clicking on image thumbnails.
 
-To see how you can add code snippets, see below:
-
-```html
+<!---```html
 <h1>Some HTML code I'm proud of</h1>
 ```
 
@@ -67,28 +65,24 @@ To see how you can add code snippets, see below:
 }
 ```
 
+
+
 ```js
 const proudOfThisFunc = () => {
   console.log("🎉");
 };
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.--->
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+In future projects, I'd like to try incorporating other front-end related technologies that I did not make use of here (e.g. React, TailwindCSS), to gain understanding and experience with them.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [CSS Tricks](https://css-tricks.com/) - An excellent resource full of information on how to effectively work with CSS.
+- [CSS color to filter generator](https://codepen.io/sosuke/pen/Pjoqqp) - This was helpful with easily applying color changes to icons in this project.
 
 ## Author
 
