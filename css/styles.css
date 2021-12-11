@@ -162,6 +162,14 @@ body {
   position: relative;
 }
 
+.nav__cart-container:hover .nav__cart {
+  filter: brightness(0.1);
+}
+
+.nav__cart {
+  transition: filter 0.2s;
+}
+
 .nav__cart-badge {
   background-color: var(--color-primary);
   border-radius: 12px;
@@ -174,14 +182,6 @@ body {
   top: 0;
   right: 0;
   z-index: 1;
-}
-
-.nav__cart {
-  transition: filter 0.2s;
-}
-
-.nav__cart:hover {
-  filter: brightness(0.1);
 }
 
 .nav__avatar {
@@ -369,7 +369,7 @@ body {
 
 /* Product info block */
 .product {
-  margin: 2rem;
+  margin: 1rem 2rem 2rem;
 }
 
 .product__company {
@@ -392,6 +392,9 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
+  .product {
+    margin: 2rem;
+  }
   .product__name {
     font-size: 4.6rem;
   }
@@ -469,7 +472,12 @@ body {
   display: block;
 }
 
-.slideshow__image > img,
+.slideshow__image > img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 50rem;
+}
+
 .slideshow__image--lightbox > img {
   width: 100%;
 }
@@ -510,6 +518,13 @@ body {
 
   .slideshow__thumbnail {
     width: 100%;
+    height: 100%;
+    overflow: auto;
+  }
+
+  .slideshow__image > img {
+    width: 100%;
+    max-height: 100%;
   }
 
   .slideshow__image img,
@@ -637,7 +652,6 @@ body {
 
   .slideshow__thumbnail--lightbox-container {
     background-color: white;
-    border: 0 solid rgba(0, 0, 0, 0);
   }
 
   .slideshow__thumbnail--lightbox {
@@ -652,9 +666,10 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  width: 100vw;
   max-width: 1500px;
+  pointer-events: none;
   position: absolute;
+  width: 100vw;
   z-index: 1;
 }
 
@@ -663,9 +678,10 @@ body {
   border-radius: 12px;
   box-shadow: 0 10px 30px 5px rgba(124, 120, 120, 0.75);
   display: block;
-  margin: 0 auto;
+  margin: 1rem auto 0;
   max-width: 40rem;
   padding: 1.5rem 2rem 3rem 2rem;
+  pointer-events: auto;
   width: 95%;
   z-index: 1;
 }
@@ -736,7 +752,7 @@ body {
 /* make it lean closer to rightside of page as it reaches its max-width */
 @media screen and (min-width: 400px) {
   .cart-card {
-    margin: auto 2.5%;
+    margin: -1.5rem 2.5% auto;
     justify-self: end;
   }
 }
