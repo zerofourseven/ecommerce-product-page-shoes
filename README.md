@@ -51,7 +51,7 @@ The challenge was to create a responsive site using the design images provided b
 
 ### What I learned
 
-Working on this allowed me to gain experience and try a number of things new to me. Concepts I had previously learned like working with Flexbox and Grids, using the BEM naming convention, etc. were reinforced. As for learnings, for one, I learned how to implemented lightboxes. I also grasped how to implement image slideshows, both by using arrows and also by clicking on image thumbnails.
+Working on this allowed me to gain experience and try a number of things new to me. Concepts I had previously learned like working with Flexbox and Grids, using the BEM naming convention, etc. were reinforced. As for learnings, for one, I learned how to implement lightboxes. I also grasped how to implement image slideshows, both by using arrows and also by clicking on image thumbnails.
 
 <!---```html
 <h1>Some HTML code I'm proud of</h1>
