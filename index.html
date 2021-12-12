@@ -4,7 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-    <meta name="description" content="Purchase great shoes at Sneakers!" />
+    <meta
+      name="description"
+      content="SNEAKERS offers the latest selection of fashionable footwear."
+    />
+    <meta property="og:title" content="SNEAKERS... " />
+    <meta
+      property="og:description"
+      content="SNEAKERS offers the latest selection of fashionable footwear."
+    />
+    <meta property="og:type" content="SNEAKERS... " />
+    <meta property="og:image" content="http://" />
     <link
       rel="icon"
       type="image/png"
@@ -20,7 +30,7 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
 
-    <title>Frontend Mentor | E-commerce product page</title>
+    <title>SNEAKERS Official Website</title>
   </head>
   <body>
     <div
@@ -103,7 +113,7 @@
     <!--Lightbox section-->
     <div id="lightbox" class="lightbox">
       <div id="shadow--slideshow" class="shadow shadow--slideshow">
-        <section class="slideshow slideshow--lightbox">
+        <div class="slideshow slideshow--lightbox">
           <img
             class="lightbox__close"
             src="images/icon-close.svg"
@@ -176,14 +186,14 @@
               />
             </div>
           </div>
-        </section>
+        </div>
       </div>
     </div>
 
     <!--NOTE this grid contains image showcase block AND product info block -->
     <div class="grid grid--1x2 container main-grid-container">
       <!--Image / Slideshow section-->
-      <section class="slideshow container">
+      <div class="slideshow container">
         <div id="slideshow__image-container" onclick="openLightbox()">
           <div class="slideshow__image">
             <img src="images/image-product-1.jpg" alt="Image of shoes" />
@@ -243,7 +253,7 @@
             onclick="currentSlide(4)"
           />
         </div>
-      </section>
+      </div>
       <!--Product info section-->
       <section class="product container">
         <header>

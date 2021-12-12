@@ -444,13 +444,6 @@ body {
     grid-auto-flow: unset;
   }
 
-  .price-sale {
-    /*font-size: 2.6rem;*/
-  }
-
-  .price-deal {
-  }
-
   .price-original {
     display: block;
     margin-left: 0;
