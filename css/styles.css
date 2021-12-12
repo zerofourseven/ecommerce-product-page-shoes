@@ -268,9 +268,11 @@ body {
   background-color: var(--color-primary);
   border-radius: 12px;
   color: white;
+  overflow: auto;
   padding: 2rem 4vw;
   text-align: center;
   transition: opacity 0.3s;
+  width: 100%;
 }
 
 .btn--circle {
@@ -320,7 +322,6 @@ body {
   font-size: 2rem;
   justify-content: space-between;
   margin: 2rem 0;
-  min-width: 100%;
   outline: 0;
   padding: 2rem 1rem;
   text-align: center;
@@ -665,10 +666,13 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  max-width: 1500px;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 0%);
+  max-width: 1350px;
   pointer-events: none;
   position: absolute;
-  width: 100vw;
+  width: 100%;
   z-index: 1;
 }
 
@@ -751,7 +755,7 @@ body {
 /* make it lean closer to rightside of page as it reaches its max-width */
 @media screen and (min-width: 400px) {
   .cart-card {
-    margin: -1.5rem 2.5% auto;
+    margin: -1.5rem 1% auto;
     justify-self: end;
   }
 }
