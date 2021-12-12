@@ -1,0 +1,22 @@
+{
+  "name": "ecommerce-product-page-shoes",
+  "version": "1.0.0",
+  "description": "This is my solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6), a site with challenges to help with improving coding skills with realistic project building.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zerofourseven/ecommerce-product-page-shoes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zerofourseven/ecommerce-product-page-shoes/issues"
+  },
+  "homepage": "https://github.com/zerofourseven/ecommerce-product-page-shoes#readme",
+  "devDependencies": {
+    "parcel": "^2.0.1"
+  }
+}
