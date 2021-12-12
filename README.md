@@ -35,8 +35,7 @@ The challenge was to create a responsive site using the design images provided b
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution: [On Netlify](https://silly-sinoussi-a38d0f.netlify.app/)
 
 ## My process
 
