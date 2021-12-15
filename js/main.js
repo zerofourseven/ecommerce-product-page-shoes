@@ -114,38 +114,8 @@ function showSlides(n){
   thumbnailsLightbox[slideIndex - 1].className += " active";
 }
 
-/* unneeded code for lightbox image gallery */
-/*const mediaQuery = window.matchMedia('(min-width: 1440px)');
-
-function handleSizeChange(e) {
-  if(e.matches) {
-    document.getElementById("shadow").style.visibility = "visible";
- document.getElementById("shadow").style.opacity = "1";
-  }
-  else {
-    
-  }
-}
-//register event listener
-mediaQuery.addListener(handleSizeChange);
-//the initial check
-handleSizeChange(mediaQuery)*/
-
-/*var lightboxQuery = window.matchMedia('(min-width: 1440px)');
-
-lightboxQuery.onchange = (e) => {
-  if(e.matches){ //if screen is > 1440px, show lightbox when openlightbox is clicked
-    document.getElementById("slideshow__image-container").onclick = openLightbox;
-  }
-  else {
-    document.getElementById("slideshow__image-container").onclick = function() {};
-  }
-
-}*/
-
-
 function openLightbox(){
-  //only want lightbox if in desktop mode.
+  //only want lightbox if at Desktop size screen or larger.
   if (window.innerWidth >= 1200){
     document.getElementById("lightbox").style.display = "block";
     document.getElementById("shadow--slideshow").style.visibility = "visible";

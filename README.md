@@ -30,13 +30,12 @@ The challenge was to create a responsive site using the design images provided b
 
 ### Some Screenshots
 
-![Desktop view](https://i.gyazo.com/2bcd6c00756fcc08c274806919318182.png)
-![Mobile view](https://i.gyazo.com/442d0285b38a49c13a4f3223be40adad.png)
+![Desktop view](https://i.gyazo.com/9d5e7bb9d5ee1585d82296a4f9b879a4.jpg)
+![Mobile view](https://i.gyazo.com/2adff57f2f225023336ceaca1da0eb17.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution: [On Netlify](https://silly-sinoussi-a38d0f.netlify.app/)
 
 ## My process
 
@@ -84,7 +83,4 @@ In future projects, I'd like to try incorporating other front-end related techno
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Chris Williams
