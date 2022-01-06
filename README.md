@@ -7,7 +7,7 @@ This is my solution to the [E-commerce product page challenge on Frontend Mentor
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Some Screenshots](#some-screenshots)
-  - [Links](#links)
+  - [Link](#link)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
@@ -33,9 +33,9 @@ The challenge was to create a responsive site using the design images provided b
 ![Desktop view](https://i.gyazo.com/9d5e7bb9d5ee1585d82296a4f9b879a4.jpg)
 ![Mobile view](https://i.gyazo.com/2adff57f2f225023336ceaca1da0eb17.png)
 
-### Links
+### Link
 
-- Solution: [On Netlify](https://silly-sinoussi-a38d0f.netlify.app/)
+- Solution: [On Netlify](https://sneakers-ecommerce047.netlify.app/)
 
 ## My process
 
@@ -43,38 +43,17 @@ The challenge was to create a responsive site using the design images provided b
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
 - CSS Grid
 - Mobile-first workflow
 - Javascript
 
 ### What I learned
 
-Working on this allowed me to gain experience and try a number of things new to me. Concepts I had previously learned like working with Flexbox and Grids, using the BEM naming convention, etc. were reinforced. As for learnings, for one, I learned how to implement lightboxes. I also grasped how to implement image slideshows, both by using arrows and also by clicking on image thumbnails.
-
-<!---```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-
-
-
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.--->
+Working on this allowed me to gain experience and try a number of things new to me. Concepts I had previously learned like working with Flex and Grids, using the BEM naming convention, etc. were reinforced. As for learnings, for one, I learned how to implement lightboxes. I also grasped how to implement image slideshows, both by using arrows and also by clicking on image thumbnails.
 
 ### Continued development
 
-In future projects, I'd like to try incorporating other front-end related technologies that I did not make use of here (e.g. React, TailwindCSS), to gain understanding and experience with them.
+In future projects, I'd like to incorporate other front-end related technologies that I did not make use of here (e.g. React, TailwindCSS), to gain more understanding and experience with them.
 
 ### Useful resources
 

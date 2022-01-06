@@ -191,118 +191,119 @@
       </div>
     </div>
 
-    <!--NOTE this grid contains image showcase block AND product info block -->
-    <div class="grid grid--1x2 container main-grid-container">
-      <!--Image / Slideshow section-->
-      <div class="slideshow container">
-        <div id="slideshow__image-container" onclick="openLightbox()">
-          <div class="slideshow__image">
-            <img src="images/image-product-1.jpg" alt="Image of shoes" />
+    <main>
+      <!--NOTE this grid contains image showcase block AND product info block -->
+      <div class="grid grid--1x2 container main-grid-container">
+        <!--Image / Slideshow section-->
+        <div class="slideshow container">
+          <div id="slideshow__image-container" onclick="openLightbox()">
+            <div class="slideshow__image">
+              <img src="images/image-product-1.jpg" alt="Image of shoes" />
+            </div>
+            <div class="slideshow__image">
+              <img src="images/image-product-2.jpg" alt="Image of shoes" />
+            </div>
+            <div class="slideshow__image">
+              <img src="images/image-product-3.jpg" alt="Image of shoes" />
+            </div>
+            <div class="slideshow__image">
+              <img src="images/image-product-4.jpg" alt="Image of shoes" />
+            </div>
           </div>
-          <div class="slideshow__image">
-            <img src="images/image-product-2.jpg" alt="Image of shoes" />
+          <div class="slideshow__buttons slideshow__buttons--main">
+            <button
+              class="btn btn--circle slideshow__previous"
+              onClick="changeSlides(-1)"
+            >
+              <img
+                src="images/icon-previous.svg"
+                alt="Previous image"
+                class="icon"
+              />
+            </button>
+            <button
+              class="btn btn--circle slideshow__next"
+              onClick="changeSlides(1)"
+            >
+              <img src="images/icon-next.svg" alt="Next image" class="icon" />
+            </button>
           </div>
-          <div class="slideshow__image">
-            <img src="images/image-product-3.jpg" alt="Image of shoes" />
-          </div>
-          <div class="slideshow__image">
-            <img src="images/image-product-4.jpg" alt="Image of shoes" />
-          </div>
-        </div>
-        <div class="slideshow__buttons slideshow__buttons--main">
-          <button
-            class="btn btn--circle slideshow__previous"
-            onClick="changeSlides(-1)"
-          >
-            <img
-              src="images/icon-previous.svg"
-              alt="Previous image"
-              class="icon"
-            />
-          </button>
-          <button
-            class="btn btn--circle slideshow__next"
-            onClick="changeSlides(1)"
-          >
-            <img src="images/icon-next.svg" alt="Next image" class="icon" />
-          </button>
-        </div>
 
-        <div class="slideshow__thumbnails-row">
-          <img
-            src="images/image-product-1-thumbnail.jpg"
-            alt="Image of shoes"
-            class="slideshow__thumbnail"
-            onclick="currentSlide(1)"
-          />
-          <img
-            src="images/image-product-2-thumbnail.jpg"
-            alt="Image of shoes"
-            class="slideshow__thumbnail"
-            onclick="currentSlide(2)"
-          />
-          <img
-            src="images/image-product-3-thumbnail.jpg"
-            alt="Image of shoes"
-            class="slideshow__thumbnail"
-            onclick="currentSlide(3)"
-          />
-          <img
-            src="images/image-product-4-thumbnail.jpg"
-            alt="Image of shoes"
-            class="slideshow__thumbnail"
-            onclick="currentSlide(4)"
-          />
+          <div class="slideshow__thumbnails-row">
+            <img
+              src="images/image-product-1-thumbnail.jpg"
+              alt="Image of shoes"
+              class="slideshow__thumbnail"
+              onclick="currentSlide(1)"
+            />
+            <img
+              src="images/image-product-2-thumbnail.jpg"
+              alt="Image of shoes"
+              class="slideshow__thumbnail"
+              onclick="currentSlide(2)"
+            />
+            <img
+              src="images/image-product-3-thumbnail.jpg"
+              alt="Image of shoes"
+              class="slideshow__thumbnail"
+              onclick="currentSlide(3)"
+            />
+            <img
+              src="images/image-product-4-thumbnail.jpg"
+              alt="Image of shoes"
+              class="slideshow__thumbnail"
+              onclick="currentSlide(4)"
+            />
+          </div>
         </div>
+        <!--Product info section-->
+        <section class="product container">
+          <header>
+            <h2 class="product__company">Sneaker Company</h2>
+            <h1 class="product__name">Fall Limited Edition Sneakers</h1>
+          </header>
+          <p class="product__description">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+          <div class="price-section">
+            <span class="price-section-segment">
+              <span class="price-sale">$125.00</span>
+              <span class="price-deal">50%</span>
+            </span>
+            <span class="price-original">$250.00</span>
+          </div>
+          <div class="product__button-grid">
+            <div class="product__count-button">
+              <button class="btn" onclick="subAmount()">
+                <img
+                  class="icon--count icon-sub"
+                  src="images/icon-minus.svg"
+                  alt="Add less to cart"
+                />
+              </button>
+              <div id="item-amount">0</div>
+              <button class="btn" onclick="addAmount()">
+                <img
+                  class="icon--count"
+                  src="images/icon-plus.svg"
+                  alt="Add more to cart"
+                />
+              </button>
+            </div>
+            <button class="btn btn--block btn--shadow" onclick="addToCart()">
+              <img
+                class="icon"
+                src="images/icon-cart.svg"
+                alt="Add items to cart"
+              />
+              Add to cart
+            </button>
+          </div>
+        </section>
       </div>
-      <!--Product info section-->
-      <section class="product container">
-        <header>
-          <h2 class="product__company">Sneaker Company</h2>
-          <h1 class="product__name">Fall Limited Edition Sneakers</h1>
-        </header>
-        <p class="product__description">
-          These low-profile sneakers are your perfect casual wear companion.
-          Featuring a durable rubber outer sole, they’ll withstand everything
-          the weather can offer.
-        </p>
-        <div class="price-section">
-          <span class="price-section-segment">
-            <span class="price-sale">$125.00</span>
-            <span class="price-deal">50%</span>
-          </span>
-          <span class="price-original">$250.00</span>
-        </div>
-        <div class="product__button-grid">
-          <div class="product__count-button">
-            <button class="btn" onclick="subAmount()">
-              <img
-                class="icon--count icon-sub"
-                src="images/icon-minus.svg"
-                alt="Add less to cart"
-              />
-            </button>
-            <div id="item-amount">0</div>
-            <button class="btn" onclick="addAmount()">
-              <img
-                class="icon--count"
-                src="images/icon-plus.svg"
-                alt="Add more to cart"
-              />
-            </button>
-          </div>
-          <button class="btn btn--block btn--shadow" onclick="addToCart()">
-            <img
-              class="icon"
-              src="images/icon-cart.svg"
-              alt="Add items to cart"
-            />
-            Add to cart
-          </button>
-        </div>
-      </section>
-    </div>
-
+    </main>
     <!-- <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
