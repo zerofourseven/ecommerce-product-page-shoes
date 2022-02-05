@@ -1,13 +1,14 @@
 # Frontend Mentor - E-commerce product page solution
 
+**https://sneakers-ecommerce047.netlify.app/**
+
 This is my solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6), a site with challenges to help with improving coding skills with realistic project building.
 
 ## Table of contents
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Some Screenshots](#some-screenshots)
-  - [Link](#link)
+  - [Some screenshots](#some-screenshots)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
@@ -32,10 +33,6 @@ The challenge was to create a responsive site using the design images provided b
 
 ![Desktop view](https://i.gyazo.com/9d5e7bb9d5ee1585d82296a4f9b879a4.jpg)
 ![Mobile view](https://i.gyazo.com/2adff57f2f225023336ceaca1da0eb17.png)
-
-### Link
-
-- Solution: [On Netlify](https://sneakers-ecommerce047.netlify.app/)
 
 ## My process
 
