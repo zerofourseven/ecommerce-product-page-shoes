@@ -1,8 +1,8 @@
-# Frontend Mentor - E-commerce product page solution
+# E-commerce product page
 
 **https://sneakers-ecommerce047.netlify.app/**
 
-This is my solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6), a site with challenges to help with improving coding skills with realistic project building.
+This is my solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6), a site with challenges to help with improving coding skills with realistic project building.They provided images of what the site should look like. All of the coding for the site was done by me.
 
 ## Table of contents
 
